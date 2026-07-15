@@ -24,21 +24,20 @@ script.js                           Dark-mode toggle + mobile nav
 - [ ] Case Study 2 build (scheduled weeks 3–4)
 - [ ] Case Study 3 build (scheduled weeks 5–6)
 - [ ] Distinct case-study icon *artwork* (current icons are placeholder line-art with the right motif — network/node for CS1, orbit/control for CS2, document/chart for CS3 — final illustrated versions TBD)
-- [ ] LinkedIn URL and resume PDF (placeholders in About section)
+- [x] LinkedIn URL (live in About section)
+- [ ] Resume PDF (placeholder in About section)
 - [ ] Deployed Vercel URL
 
 ## Open items requiring Guillaume
 
 1. **Case Study 1 real assets.** Run 1–2 real jobs through the pipeline (reference image → TRELLIS2 mesh → UE5 import, and/or Figma component → UMG/Widget Blueprint) and capture genuine screenshots + rough timing notes. Send these back and the case study narrative gets written from them — no placeholder content will be substituted for this.
-2. **Bio copy** — starter draft below. Factual only; edit or replace before publishing.
-3. **LinkedIn URL and resume PDF** for the About section links.
+2. ~~Bio copy~~ — done, final bio live in the About section (EN/FR).
+3. **Resume PDF** for the About section link (LinkedIn is live).
 4. **GitHub repo** — created empty at `guillaume-ux-portfolio` (public); this code needs to be pushed to it (see push instructions below) and then imported into Vercel.
 
-## Starter bio draft (factual, for Guillaume to edit)
+## Bio (live on site)
 
-> Guillaume Goder is a UX/product designer with a background in illustration (OCAD) and several years in game development, now working at the intersection of product UX and AI-assisted design tooling. His recent work includes building a personal AI/MCP pipeline connecting Claude, Blender, Unreal Engine, Figma, and ComfyUI — using that same technical fluency to design and prototype user-facing product experiences. He's based in [city — fill in] and open to [role type — fill in, e.g. "UX/Product Designer roles in tech-product teams"].
-
-This draft avoids: invented metrics, generic "passionate about" phrasing, and unverifiable claims. Replace bracketed fields and adjust tone before publishing.
+> I'm a UX/Product Designer and Concept Artist based in Montréal, working at the intersection of research, interface design, and implementation. Over six years in the game industry — most recently as Lead UI/UX Designer at Little Guy Games — I've designed and shipped interfaces through to Unreal Engine 5, and built my own AI-assisted creative pipeline connecting Claude, Blender, UE5, Figma, and ComfyUI. I hold a Bachelor of Design in Illustration from OCAD University and UX/UI certifications from Epic Games. Bilingual (EN/FR).
 
 ## Pushing to GitHub
 
