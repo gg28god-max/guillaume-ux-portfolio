@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guillaume Goder — UX / Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #FAF6EF;
+    --text: #2B2620;
+    --muted: #6B6255;
+    --accent1: #E8AB6B;
+    --accent2: #C96B4A;
+    --line: rgba(43,38,32,0.14);
+    --card: #FFFFFF;
+  }
+  [data-theme="dark"]{
+    --bg: #1C1811;
+    --text: #F2EDE3;
+    --muted: #B8AE9E;
+    --accent1: #EFB979;
+    --accent2: #E08A63;
+    --line: rgba(242,237,227,0.14);
+    --card: #241F17;
+  }
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    transition: background .25s ease, color .25s ease;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3{ font-family: 'Newsreader', serif; margin:0; }
+  a{ color: var(--accent2); text-decoration: none; }
+  a:hover{ text-decoration: underline; }
+
+  .wrap{ max-width: 800px; margin: 0 auto; padding: 56px 32px 80px; }
+
+  .topbar{ display:flex; justify-content:flex-end; margin-bottom: 20px; }
+  .toggle{
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .toggle:hover{ color: var(--text); border-color: var(--accent2); }
+
+  header{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 22px;
+    margin-bottom: 26px;
+  }
+  .name{ font-size: 40px; font-weight: 600; letter-spacing: -0.5px; }
+  .name span{ color: var(--accent2); }
+  .role{ font-family: 'Newsreader', serif; font-style: italic; font-size: 18px; color: var(--accent2); margin-top: 4px; }
+  .tagline{ font-size: 14.5px; color: var(--muted); margin-top: 8px; max-width: 46ch; line-height: 1.5; }
+
+  .contact{ text-align: right; font-size: 13.5px; color: var(--muted); line-height: 1.9; }
+  .contact a{ color: var(--text); }
+
+  section{ margin-bottom: 28px; }
+  .section-title{
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 14px;
+  }
+
+  .role-block{ margin-bottom: 20px; }
+  .role-block:last-child{ margin-bottom: 0; }
+  .role-line{ display:flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; }
+  .role-title{ font-weight: 600; font-size: 16px; }
+  .role-title .company{ color: var(--text); }
+  .role-title .sep{ color: var(--muted); font-weight: 400; margin: 0 6px; }
+  .dates{ font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+  .project{ font-style: italic; font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+  ul.bullets{ margin: 10px 0 0; padding-left: 18px; }
+  ul.bullets li{ font-size: 14px; line-height: 1.55; margin-bottom: 6px; color: var(--text); }
+  ul.bullets li::marker{ color: var(--accent1); }
+
+  .skills-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .skill-card h3{ font-family:'Inter',sans-serif; font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  .skill-card p{ font-size: 13px; color: var(--muted); line-height: 1.6; margin:0; }
+
+  .ed-cert-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .ed-cert-grid h3{ font-family:'Inter',sans-serif; font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .ed-cert-grid .school{ color: var(--accent2); font-size: 13px; }
+  .ed-cert-grid .yr{ color: var(--muted); font-size: 12.5px; }
+
+  .portfolio-note{
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 20px;
+    background: var(--card);
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .portfolio-note b{ color: var(--text); }
+
+  footer{ margin-top: 30px; text-align:center; font-size: 12px; color: var(--muted); }
+
+  @media (max-width: 640px){
+    .name{ font-size: 30px; }
+    .contact{ text-align: left; }
+    header{ flex-direction: column; }
+    .skills-grid{ grid-template-columns: 1fr; }
+    .ed-cert-grid{ grid-template-columns: 1fr; }
+  }
+
+  @media print{
+    .toggle, .topbar{ display:none; }
+    body{ background: #fff; color:#000; }
+    .wrap{ max-width: 100%; padding: 20px 30px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <button class="toggle" onclick="document.documentElement.toggleAttribute('data-theme', undefined) || (function(){const el=document.documentElement; el.getAttribute('data-theme')==='dark'? el.removeAttribute('data-theme') : el.setAttribute('data-theme','dark');})()">
+        Toggle dark mode
+      </button>
+    </div>
+
+    <header>
+      <div>
+        <div class="name">Guillaume <span>Goder</span></div>
+        <div class="role">UX / Product Designer</div>
+        <p class="tagline">UX/Product Designer who ships — from research through to a working build, with six years turning interfaces into shipped, in-engine product.</p>
+      </div>
+      <div class="contact">
+        Montréal, QC, Canada<br>
+        647-766-3014<br>
+        <a href="mailto:gg28.god@gmail.com">gg28.god@gmail.com</a><br>
+        <a href="https://guillaumedesign.ca" target="_blank">guillaumedesign.ca</a><br>
+        Bilingual — English &amp; French
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">Experience</div>
+
+      <div class="role-block">
+        <div class="role-line">
+          <div class="role-title"><span class="company">Little Guy Games</span><span class="sep">—</span>Lead UI/UX Designer</div>
+          <div class="dates">Nov 2021 – Aug 2025</div>
+        </div>
+        <div class="project">Home Run Derby VR (Meta Quest) &amp; Wings of Wanitu</div>
+        <ul class="bullets">
+          <li>Owned end-to-end UX architecture, user flows, and interface layouts across two shipped products, from low- and high-fidelity prototypes through to final in-engine implementation.</li>
+          <li>Built and maintained a modular UI component/design system used across multiple products, keeping visual and interaction patterns consistent at scale.</li>
+          <li>Applied accessibility and inclusive design practices — adaptive layouts and clear feedback systems — to support users of varying skill levels and needs.</li>
+          <li>Directly implemented UI in Unreal Engine 5 (UMG): asset pipelines, texture atlasing, and performance-conscious builds; used Git/GitHub for version control across cross-disciplinary teams.</li>
+          <li>Used AI-assisted workflows (Claude + MCP) to speed up prototyping in Figma and implementation in-engine — a productivity accelerator, not a substitute for design judgment.</li>
+        </ul>
+      </div>
+
+      <div class="role-block">
+        <div class="role-line">
+          <div class="role-title"><span class="company">Cosmic Games Studio</span><span class="sep">—</span>Lead Concept Artist</div>
+          <div class="dates">Oct 2019 – Nov 2020</div>
+        </div>
+        <div class="project">STARQUEST</div>
+        <ul class="bullets">
+          <li>Led visual development for a sci-fi title's world and characters, taking work from thumbnail through production-ready, hand-off-ready deliverables for 3D and technical art teams — the same thumbnail-to-spec discipline now applied to interface and flow design.</li>
+        </ul>
+      </div>
+
+      <div class="role-block">
+        <div class="role-line">
+          <div class="role-title"><span class="company">Telus Digital</span><span class="sep">—</span>UI/UX Designer</div>
+          <div class="dates">Jan 2019 – Apr 2019</div>
+        </div>
+        <ul class="bullets">
+          <li>Designed high-fidelity mockups and interactive prototypes for digital ecosystems, focused on scalable information architecture.</li>
+          <li>Created and maintained a UI component library and design system to keep touchpoints visually consistent across the product.</li>
+          <li>Applied accessibility standards to keep interfaces usable across diverse user needs and assistive technologies.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Skills</div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>UX</h3>
+          <p>Information architecture, user flows &amp; navigation design, wireframing, low/high-fidelity prototyping, user research &amp; usability testing, empathy mapping, accessibility &amp; inclusive design.</p>
+        </div>
+        <div class="skill-card">
+          <h3>UI &amp; Systems</h3>
+          <p>Design systems &amp; component libraries, interaction &amp; feedback design, HUD/interface design, hands-on engine implementation.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Software</h3>
+          <p>Figma, Unreal Engine 5 (UMG), Photoshop, GitHub, Claude Code / AI-assisted design-to-build workflows.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Education &amp; Certifications</div>
+      <div class="ed-cert-grid">
+        <div>
+          <h3>Bachelor of Design in Illustration</h3>
+          <div class="school">OCAD University</div>
+          <div class="yr">2015 – 2020</div>
+        </div>
+        <div>
+          <h3>User Experience &amp; User Interface in Game Design</h3>
+          <div class="school">Epic Games / Coursera</div>
+          <div class="yr">May 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Portfolio</div>
+      <div class="portfolio-note">
+        In-depth case studies — including an <b>AI-assisted creative tooling pipeline</b>, an <b>agent-trust interaction design</b> project, and a <b>clinical documentation UX</b> case study — are at <a href="https://guillaumedesign.ca" target="_blank">guillaumedesign.ca</a>.
+      </div>
+    </section>
+
+    <footer>Bilingual — English &amp; French · Montréal, QC</footer>
+  </div>
+</body>
+</html>
