@@ -25,14 +25,14 @@ script.js                           Dark-mode toggle + mobile nav
 - [ ] Case Study 3 build (scheduled weeks 5–6)
 - [ ] Distinct case-study icon *artwork* (current icons are placeholder line-art with the right motif — network/node for CS1, orbit/control for CS2, document/chart for CS3 — final illustrated versions TBD)
 - [x] LinkedIn URL (live in About section)
-- [ ] Resume PDF (placeholder in About section)
+- [x] Resume PDF (live in About section)
 - [ ] Deployed Vercel URL
 
 ## Open items requiring Guillaume
 
 1. **Case Study 1 real assets.** Run 1–2 real jobs through the pipeline (reference image → TRELLIS2 mesh → UE5 import, and/or Figma component → UMG/Widget Blueprint) and capture genuine screenshots + rough timing notes. Send these back and the case study narrative gets written from them — no placeholder content will be substituted for this.
 2. ~~Bio copy~~ — done, final bio live in the About section (EN/FR).
-3. **Resume PDF** for the About section link (LinkedIn is live).
+3. ~~LinkedIn URL and resume PDF~~ — done, both live in the About section.
 4. **GitHub repo** — created empty at `guillaume-ux-portfolio` (public); this code needs to be pushed to it (see push instructions below) and then imported into Vercel.
 
 ## Bio (live on site)
