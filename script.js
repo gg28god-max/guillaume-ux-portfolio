@@ -2,6 +2,7 @@
   "use strict";
 
   var STORAGE_KEY = "gg-theme";
+  var LANG_KEY = "gg-lang";
   var root = document.documentElement;
 
   function getPreferredTheme() {
@@ -18,6 +19,41 @@
 
   // Apply immediately to avoid flash of wrong theme.
   applyTheme(getPreferredTheme());
+
+  function getPreferredLang() {
+    var saved = localStorage.getItem(LANG_KEY);
+    return saved === "fr" ? "fr" : "en";
+  }
+
+  function applyLang(lang) {
+    root.setAttribute("lang", lang);
+
+    var toggle = document.querySelector(".lang-toggle");
+    if (toggle) {
+      toggle.textContent = lang === "fr" ? "EN" : "FR";
+      toggle.setAttribute("aria-label", lang === "fr" ? "Switch to English" : "Passer en français");
+    }
+
+    // Plain-text elements: cache original English on first swap, then toggle.
+    var textEls = document.querySelectorAll("[data-fr]");
+    for (var i = 0; i < textEls.length; i++) {
+      var el = textEls[i];
+      if (!el.hasAttribute("data-en")) {
+        el.setAttribute("data-en", el.textContent);
+      }
+      el.textContent = lang === "fr" ? el.getAttribute("data-fr") : el.getAttribute("data-en");
+    }
+
+    // Elements with embedded markup (links, emphasis) use innerHTML swap instead.
+    var htmlEls = document.querySelectorAll("[data-fr-html]");
+    for (var j = 0; j < htmlEls.length; j++) {
+      var elh = htmlEls[j];
+      if (!elh.hasAttribute("data-en-html")) {
+        elh.setAttribute("data-en-html", elh.innerHTML);
+      }
+      elh.innerHTML = lang === "fr" ? elh.getAttribute("data-fr-html") : elh.getAttribute("data-en-html");
+    }
+  }
 
   document.addEventListener("DOMContentLoaded", function () {
     var toggle = document.querySelector(".theme-toggle");
@@ -36,6 +72,18 @@
       navToggle.addEventListener("click", function () {
         var open = header.classList.toggle("nav-open");
         navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    }
+
+    applyLang(getPreferredLang());
+
+    var langToggle = document.querySelector(".lang-toggle");
+    if (langToggle) {
+      langToggle.addEventListener("click", function () {
+        var current = root.getAttribute("lang") === "fr" ? "fr" : "en";
+        var next = current === "fr" ? "en" : "fr";
+        applyLang(next);
+        localStorage.setItem(LANG_KEY, next);
       });
     }
   });

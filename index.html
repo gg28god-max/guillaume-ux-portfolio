@@ -24,12 +24,13 @@
     <a class="brand" href="/">Guillaume Goder</a>
     <nav aria-label="Primary">
       <ul class="nav-links">
-        <li><a href="#work">Work</a></li>
-        <li><a href="#how-i-work">How I Work</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#work" data-fr="Travaux">Work</a></li>
+        <li><a href="#how-i-work" data-fr="Ma méthode">How I Work</a></li>
+        <li><a href="#about" data-fr="À propos">About</a></li>
       </ul>
     </nav>
     <div style="display:flex; align-items:center; gap:10px;">
+      <button class="lang-toggle" aria-label="Passer en français">FR</button>
       <button class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
@@ -46,12 +47,12 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow">UX / Product Design</span>
+        <span class="eyebrow" data-fr="Design UX / Produit">UX / Product Design</span>
         <h1>Guillaume Goder</h1>
-        <p class="positioning">UX/Product Designer who ships — from research through to a working build.</p>
+        <p class="positioning" data-fr="Designer UX/Produit qui livre — de la recherche jusqu'à un produit fonctionnel.">UX/Product Designer who ships — from research through to a working build.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#work">See the work</a>
-          <a class="btn btn-secondary" href="#about">About &amp; contact</a>
+          <a class="btn btn-primary" href="#work" data-fr="Voir les projets">See the work</a>
+          <a class="btn btn-secondary" href="#about" data-fr="À propos et contact">About &amp; contact</a>
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
@@ -75,8 +76,8 @@
   <section class="section" id="work">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Selected Work</span>
-        <h2>Three case studies, three kinds of hard problems</h2>
+        <span class="eyebrow" data-fr="Projets sélectionnés">Selected Work</span>
+        <h2 data-fr="Trois études de cas, trois types de problèmes complexes">Three case studies, three kinds of hard problems</h2>
       </div>
 
       <div class="cards">
@@ -92,10 +93,10 @@
               <path d="M9.5 12l9 8M34.5 12l-9 8M9.5 32l9-8M34.5 32l-9-8" stroke="currentColor" stroke-width="1.6"/>
             </svg>
           </div>
-          <span class="card-tag">Real System · In Progress</span>
-          <h3>Designing the orchestration layer for a multi-tool AI creative pipeline</h3>
-          <p>Connecting Claude, Blender, UE5, Figma and ComfyUI through MCP into one directable interface — real pipeline, real constraints.</p>
-          <span class="card-status">Live capture in progress →</span>
+          <span class="card-tag" data-fr="Système réel · En cours">Real System · In Progress</span>
+          <h3 data-fr="Concevoir la couche d'orchestration d'un pipeline créatif IA multi-outils">Designing the orchestration layer for a multi-tool AI creative pipeline</h3>
+          <p data-fr="Relier Claude, Blender, UE5, Figma et ComfyUI via MCP en une seule interface pilotable — un pipeline réel, des contraintes réelles.">Connecting Claude, Blender, UE5, Figma and ComfyUI through MCP into one directable interface — real pipeline, real constraints.</p>
+          <span class="card-status" data-fr="Capture en direct en cours →">Live capture in progress →</span>
         </a>
 
         <a class="card" href="case-studies/agent-trust.html">
@@ -106,10 +107,10 @@
               <path d="M22 6v6M22 32v6M6 22h6M32 22h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </div>
-          <span class="card-tag">Speculative · Weeks 3–4</span>
-          <h3>Designing calibrated trust into an agentic copilot</h3>
-          <p>Intent previews, an autonomy dial, and undo primitives for a workflow tool where the agent has to earn control incrementally.</p>
-          <span class="card-status">Coming next →</span>
+          <span class="card-tag" data-fr="Spéculatif · Semaines 3-4">Speculative · Weeks 3–4</span>
+          <h3 data-fr="Concevoir une confiance calibrée dans un copilote agentique">Designing calibrated trust into an agentic copilot</h3>
+          <p data-fr="Aperçus d'intention, un curseur d'autonomie et des mécanismes d'annulation pour un outil où l'agent doit gagner le contrôle progressivement.">Intent previews, an autonomy dial, and undo primitives for a workflow tool where the agent has to earn control incrementally.</p>
+          <span class="card-status" data-fr="À venir →">Coming next →</span>
         </a>
 
         <a class="card" href="case-studies/ehr-documentation.html">
@@ -120,38 +121,38 @@
               <path d="M29 30l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <span class="card-tag">Speculative · Weeks 5–6</span>
-          <h3>Cutting documentation burden in acute-care shift handoff</h3>
-          <p>A focused redesign of one high-stakes clinician workflow, grounded in published burnout and alert-fatigue research.</p>
-          <span class="card-status">Coming later →</span>
+          <span class="card-tag" data-fr="Spéculatif · Semaines 5-6">Speculative · Weeks 5–6</span>
+          <h3 data-fr="Réduire la charge de documentation lors des relèves en soins aigus">Cutting documentation burden in acute-care shift handoff</h3>
+          <p data-fr="Une refonte ciblée d'un flux clinique à enjeux élevés, fondée sur des recherches publiées sur l'épuisement professionnel et la fatigue d'alerte.">A focused redesign of one high-stakes clinician workflow, grounded in published burnout and alert-fatigue research.</p>
+          <span class="card-status" data-fr="À venir plus tard →">Coming later →</span>
         </a>
 
       </div>
     </div>
   </section>
 
-  <section class="section" id="how-i-work" style="padding-top:0;">
+  <section class="section" id="how-i-work" style="padding:0;">
     <div class="wrap">
       <div class="how-strip">
         <div class="how-item">
           <span class="num">01</span>
-          <h4>Research</h4>
-          <p>Grounded in real constraints and published evidence, not assumption.</p>
+          <h4 data-fr="Recherche">Research</h4>
+          <p data-fr="Fondée sur des contraintes réelles et des données publiées, pas des suppositions.">Grounded in real constraints and published evidence, not assumption.</p>
         </div>
         <div class="how-item">
           <span class="num">02</span>
-          <h4>Systems thinking</h4>
-          <p>Designing the underlying model, not just the screen on top of it.</p>
+          <h4 data-fr="Pensée systémique">Systems thinking</h4>
+          <p data-fr="Concevoir le modèle sous-jacent, pas seulement l'écran qui le recouvre.">Designing the underlying model, not just the screen on top of it.</p>
         </div>
         <div class="how-item">
           <span class="num">03</span>
-          <h4>AI-fluency</h4>
-          <p>Using AI tooling as part of the working process, documented honestly.</p>
+          <h4 data-fr="Maîtrise de l'IA">AI-fluency</h4>
+          <p data-fr="Utiliser des outils IA dans le processus de travail, documenté honnêtement.">Using AI tooling as part of the working process, documented honestly.</p>
         </div>
         <div class="how-item">
           <span class="num">04</span>
-          <h4>Implementation</h4>
-          <p>Able to build the thing, not just spec it.</p>
+          <h4 data-fr="Mise en œuvre">Implementation</h4>
+          <p data-fr="Capable de construire, pas seulement de spécifier.">Able to build the thing, not just spec it.</p>
         </div>
       </div>
     </div>
@@ -160,19 +161,19 @@
   <section class="section" id="about">
     <div class="wrap about-grid">
       <div>
-        <span class="eyebrow">About</span>
+        <span class="eyebrow" data-fr="À propos">About</span>
         <h2>Guillaume Goder</h2>
-        <p class="lede">UX/product designer with a background in illustration and game development, now focused on tech-product UX and AI-assisted design tooling.</p>
-        <p><em>Bio draft in progress — see <a href="README.md">README</a> for the working draft pending Guillaume's edits.</em></p>
+        <p class="lede" data-fr="Designer UX/produit avec un parcours en illustration et développement de jeux vidéo, aujourd'hui concentré sur l'UX produit tech et les outils de conception assistés par IA.">UX/product designer with a background in illustration and game development, now focused on tech-product UX and AI-assisted design tooling.</p>
+        <p data-fr-html='<em>Ébauche de bio en cours — voir le <a href="README.md">README</a> pour la version de travail en attente des retouches de Guillaume.</em>'><em>Bio draft in progress — see <a href="README.md">README</a> for the working draft pending Guillaume's edits.</em></p>
         <div class="about-links">
-          <a class="btn btn-secondary" href="mailto:gg28.god@gmail.com">Email</a>
+          <a class="btn btn-secondary" href="mailto:gg28.god@gmail.com" data-fr="Courriel">Email</a>
           <a class="btn btn-secondary" href="#" data-placeholder="linkedin">LinkedIn</a>
-          <a class="btn btn-secondary" href="#" data-placeholder="resume">Resume (PDF)</a>
+          <a class="btn btn-secondary" href="#" data-placeholder="resume" data-fr="CV (PDF)">Resume (PDF)</a>
         </div>
-        <p style="margin-top:20px; font-size:0.9rem; color:var(--text-muted);">Also see my <a href="https://incomparable-churros-e001cf.netlify.app/" target="_blank" rel="noopener" style="color:var(--accent-2); text-decoration:underline;">concept art &amp; game UI portfolio →</a></p>
+        <p style="margin-top:20px; font-size:0.9rem; color:var(--text-muted);" data-fr-html='Voir aussi mon <a href="https://incomparable-churros-e001cf.netlify.app/" target="_blank" rel="noopener" style="color:var(--accent-2); text-decoration:underline;">Portfolio d&#39;art conceptuel et UI de jeu →</a>'>Also see my <a href="https://incomparable-churros-e001cf.netlify.app/" target="_blank" rel="noopener" style="color:var(--accent-2); text-decoration:underline;">Concept Art &amp; Game UI Portfolio →</a></p>
       </div>
       <div>
-        <p class="lede">This is a standalone tech/product-focused portfolio, separate from Guillaume's existing games-industry portfolio.</p>
+        <p class="lede" data-fr="Ce site est un portfolio autonome axé sur le tech/produit, distinct du portfolio existant de Guillaume dans l'industrie du jeu vidéo.">This is a standalone tech/product-focused portfolio, separate from Guillaume's existing games-industry portfolio.</p>
       </div>
     </div>
   </section>
@@ -182,7 +183,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>© <span id="year"></span> Guillaume Goder</p>
-    <p>Built self-coded, deployed on Vercel.</p>
+    <p data-fr="Codé à la main, déployé sur Vercel.">Built self-coded, deployed on Vercel.</p>
   </div>
 </footer>
 
