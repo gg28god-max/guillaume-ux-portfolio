@@ -53,6 +53,16 @@
       }
       elh.innerHTML = lang === "fr" ? elh.getAttribute("data-fr-html") : elh.getAttribute("data-en-html");
     }
+
+    // Links whose target file differs by language (e.g. an EN vs FR resume PDF).
+    var hrefEls = document.querySelectorAll("[data-fr-href]");
+    for (var k = 0; k < hrefEls.length; k++) {
+      var elr = hrefEls[k];
+      if (!elr.hasAttribute("data-en-href")) {
+        elr.setAttribute("data-en-href", elr.getAttribute("href"));
+      }
+      elr.setAttribute("href", lang === "fr" ? elr.getAttribute("data-fr-href") : elr.getAttribute("data-en-href"));
+    }
   }
 
   document.addEventListener("DOMContentLoaded", function () {
