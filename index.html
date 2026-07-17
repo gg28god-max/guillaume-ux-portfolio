@@ -1,193 +1,334 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Guillaume Goder — UX/Product Designer</title>
-<meta name="description" content="Guillaume Goder — UX/Product Designer who ships, from research through to a working build. Case studies in AI/MCP creative tooling, agentic AI trust design, and clinical documentation UX." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" />
-<script>
-  (function () {
-    var saved = localStorage.getItem("gg-theme");
-    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    document.documentElement.setAttribute("data-theme", theme);
-  })();
-</script>
-</head>
-<body>
-
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="/">Guillaume Goder</a>
-    <nav aria-label="Primary">
-      <ul class="nav-links">
-        <li><a href="#work" data-fr="Travaux">Work</a></li>
-        <li><a href="#how-i-work" data-fr="Ma méthode">How I Work</a></li>
-        <li><a href="#about" data-fr="À propos">About</a></li>
-      </ul>
-    </nav>
-    <div style="display:flex; align-items:center; gap:10px;">
-      <button class="lang-toggle" aria-label="Passer en français">FR</button>
-      <button class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
-      </button>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-    </div>
-  </div>
+<!DOCTYPE html><html class="dark" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#1c1b1b",
+                    "error-container": "#93000a",
+                    "on-background": "#e5e2e1",
+                    "tertiary-fixed-dim": "#a0c9ff",
+                    "on-tertiary-container": "#002d51",
+                    "on-surface": "#e5e2e1",
+                    "on-primary": "#5a1b00",
+                    "secondary-fixed": "#ffe087",
+                    "glass-fill": "rgba(19, 19, 19, 0.8)",
+                    "border-subtle": "rgba(255, 255, 255, 0.1)",
+                    "error": "#ffb4ab",
+                    "on-error": "#690005",
+                    "primary-fixed": "#ffdbce",
+                    "surface-base": "#131313",
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary-fixed-variant": "#574500",
+                    "inverse-on-surface": "#313030",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-bright": "#3a3939",
+                    "surface-container-highest": "#353534",
+                    "on-primary-fixed-variant": "#802a00",
+                    "inverse-surface": "#e5e2e1",
+                    "outline-variant": "#5b4137",
+                    "inverse-primary": "#a73a00",
+                    "surface-tint": "#ffb59a",
+                    "background-deep": "#0a0a0a",
+                    "primary": "#ffb59a",
+                    "tertiary": "#a0c9ff",
+                    "secondary": "#e9c349",
+                    "text-muted": "#e4beb1",
+                    "on-tertiary-fixed": "#001c37",
+                    "tertiary-container": "#0096fd",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-secondary": "#3c2f00",
+                    "on-tertiary-fixed-variant": "#00497f",
+                    "on-secondary-container": "#342800",
+                    "on-primary-container": "#521800",
+                    "text-on-surface": "#e5e2e1",
+                    "secondary-container": "#ae8d10",
+                    "background": "#131313",
+                    "surface": "#131313",
+                    "on-primary-fixed": "#370e00",
+                    "surface-dim": "#131313",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed": "#d2e4ff",
+                    "on-surface-variant": "#e4beb1",
+                    "on-tertiary": "#00325a",
+                    "on-secondary-fixed": "#231a00",
+                    "outline": "#ab897d",
+                    "surface-variant": "#353534",
+                    "primary-fixed-dim": "#ffb59a",
+                    "surface-container": "#201f1f",
+                    "primary-container": "#ff5c00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "32px",
+                    "section-gap": "160px",
+                    "unit": "8px",
+                    "margin-desktop": "80px",
+                    "margin-mobile": "20px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "label-mono": ["Geist Mono", "monospace"],
+                    "body-lg": ["Inter", "sans-serif"],
+                    "display-lg": ["Hanken Grotesk", "sans-serif"],
+                    "label-xs": ["Geist Mono", "monospace"],
+                    "headline-lg-mobile": ["Hanken Grotesk", "sans-serif"],
+                    "headline-lg": ["Hanken Grotesk", "sans-serif"],
+                    "body-md": ["Inter", "sans-serif"],
+                    "display-xl": ["Hanken Grotesk", "sans-serif"],
+                    "stat-lg": ["Hanken Grotesk", "sans-serif"]
+            },
+            "fontSize": {
+                    "label-mono": ["14px", { "lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                    "body-lg": ["18px", { "lineHeight": "160%", "fontWeight": "400" }],
+                    "display-lg": ["64px", { "lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "label-xs": ["10px", { "lineHeight": "100%", "letterSpacing": "0.2em", "fontWeight": "500" }],
+                    "headline-lg-mobile": ["32px", { "lineHeight": "120%", "fontWeight": "600" }],
+                    "headline-lg": ["48px", { "lineHeight": "120%", "fontWeight": "600" }],
+                    "body-md": ["16px", { "lineHeight": "160%", "fontWeight": "400" }],
+                    "display-xl": ["96px", { "lineHeight": "100%", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                    "stat-lg": ["56px", { "lineHeight": "100%", "fontWeight": "700" }]
+            }
+          },
+        },
+      }
+    }catch(_e){}</script><meta charset="utf-8"></head><body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Background Elements -->
+<div class="fixed inset-0 z-[-2] bg-background-deep"></div>
+<div class="atmospheric-glow top-[-10%] right-[-10%]" style="background: radial-gradient(circle, rgba(255, 92, 0, 0.06) 0%, transparent 70%);"></div>
+<div class="atmospheric-glow bottom-[20%] left-[-10%]" style="background: radial-gradient(circle, rgba(160, 201, 255, 0.04) 0%, transparent 70%);"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-xl bg-glass-fill border-b border-border-subtle">
+<nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<a class="font-display-lg text-body-lg font-bold text-on-surface dark:text-on-surface" href="#">
+                Guillaume Goder
+            </a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-mono text-label-mono uppercase tracking-widest text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-200" href="#work">Work</a>
+<a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 transition-all duration-200 active:opacity-70" href="#about">About</a>
+<a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 transition-all duration-200 active:opacity-70" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors"><span class="font-label-mono text-label-mono text-primary">FR</span></button>
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface">dark_mode</span>
+</button>
+</div>
+</nav>
 </header>
-
-<main>
-
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow" data-fr="Design UX / Produit">UX / Product Design</span>
-        <h1>Guillaume Goder</h1>
-        <p class="positioning" data-fr="Designer UX/Produit qui livre — de la recherche jusqu'à un produit fonctionnel.">UX/Product Designer who ships — from research through to a working build.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#work" data-fr="Voir les projets">See the work</a>
-          <a class="btn btn-secondary" href="#about" data-fr="À propos et contact">About &amp; contact</a>
-        </div>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="100" cy="80" r="10" fill="var(--accent-2)"/>
-          <circle cx="40" cy="40" r="7" fill="var(--accent-1)"/>
-          <circle cx="160" cy="40" r="7" fill="var(--accent-1)"/>
-          <circle cx="40" cy="120" r="7" fill="var(--accent-1)"/>
-          <circle cx="160" cy="120" r="7" fill="var(--accent-1)"/>
-          <g stroke="var(--text-muted)" stroke-width="1.5" opacity="0.6">
-            <line x1="100" y1="80" x2="40" y2="40"/>
-            <line x1="100" y1="80" x2="160" y2="40"/>
-            <line x1="100" y1="80" x2="40" y2="120"/>
-            <line x1="100" y1="80" x2="160" y2="120"/>
-          </g>
-        </svg>
-      </div>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden pt-4" style="transform: none;">
+<div class="z-10 max-w-4xl">
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-[0.3em] block mb-6 reveal-text">
+<span class="">UX / Product Designer</span>
+</span>
+<h1 class="font-display-xl text-[64px] md:text-display-xl text-on-surface mb-8 leading-[0.95] reveal-text">
+<span class="block">Guillaume Goder</span>
+<span class="text-on-surface-variant">Design that ships.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl reveal-text mb-6">
+<span class="">Orchestrating complex systems into intuitive human experiences. Specialized in high-stakes AI tools, technical products, and digital infrastructures.</span>
+</p>
+<div class="flex flex-col sm:flex-row gap-6 opacity-0 translate-y-4 animate-[reveal_1s_cubic-bezier(0.16,1,0.3,1)_0.4s_forwards]">
+<a class="px-8 py-4 bg-primary-container text-on-primary font-label-mono text-label-mono uppercase tracking-widest rounded-lg flex items-center justify-center gap-2 group transition-all hover:scale-105 active:scale-95 reveal-active" href="#work">
+                    See the work
+                    <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="px-8 py-4 border border-border-subtle bg-white/5 backdrop-blur-md text-on-surface font-label-mono text-label-mono uppercase tracking-widest rounded-lg flex items-center justify-center hover:bg-white/10 transition-all active:scale-95" href="#about">
+                    About &amp; Contact
+                </a>
+</div>
+</div>
+<!-- Abstract Decoration -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 aspect-square hidden lg:block">
+</div>
+</section>
+<!-- Selected Work Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-12 pt-2" id="work">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-widest block mb-4">Portfolio</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Selected Work</h2>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-xs md:text-right" id="project-dynamic-info">
+                Focusing on technical depth and scalable design systems.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Project 1 -->
+<div class="glass-card p-4 rounded-xl flex flex-col group h-full reveal-active">
+<div class="relative aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A high-tech dashboard interface for a cloud orchestration platform, featuring complex data visualizations, glowing network nodes, and a sleek dark mode aesthetic with orange and blue neon accents. The style is minimalist yet data-rich, reflecting the advanced technology described." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKmQRP0z7qVqTS4jnkEhaTAEKMpDiz1DbNpRExnc7rzbvXtExFz0br2iZ6wLzI590gxqFP835x7sOarGTiJKjq2RRqtpywNGgtAXQza1qLyYUvL4OORkPXOiXhGK1GgdAC81yOLd8YLFv5G7xoAkxiPgpuq5wVOD5XkVL2y2LGSITHYKkmB8Rj0HiJxRmuu3P3lB-mI47GOPJv228Ld4tJea0hGQk-9mt902hOlflp93Aa-gbM373QOwrWdEDBPPBE4_xKxMBoZm6l">
+</div>
+<div class="flex-1 flex flex-col">
+<span class="font-label-xs text-label-xs text-primary uppercase tracking-widest mb-2 block">System Design</span>
+<h3 class="font-headline-lg text-[24px] text-on-surface mb-4 leading-tight">Designing the orchestration layer for AI clusters</h3>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-3">Simplifying multi-node management for high-performance computing through generative UI and predictive monitoring.</p>
+<div class="mt-auto flex justify-between items-center">
+<span class="font-label-mono text-[12px] text-on-surface-variant">2024 • WEB APP</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">north_east</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="glass-card p-4 rounded-xl flex flex-col group h-full reveal-active">
+<div class="relative aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A macro shot of a sleek glass-like user interface showing a security verification process. The visual uses translucent layers, subtle grain textures, and a soft amber light source, emphasizing trust and precision in a modern technical environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkTSpG6VagsreKTeVNjILLWv_DZXnPYhh8Nl-6ogY-7cj7XFu53Wx2_T0WXgub5PrN-ANAKKY3Hb_CWaZ0VTmL89134yxcaXebGtg2J6o_EO0EpnbCwXl6gE0_r_ZU1Cl01dDDTj1LIg6bGc_zkLBjx2ha2u-g4IcVaE_CINf2HaA_S_QZvsmB8jhi8AdbzGbH7yGRrfXu-T_nCTkbMX7zcAGGEOSdPasUBdRJY5oadLhNLum5Ch_Y_GRW2mdyAOUmylXRzXWc_saG">
+</div>
+<div class="flex-1 flex flex-col">
+<span class="font-label-xs text-label-xs text-primary uppercase tracking-widest mb-2 block">Trust Engineering</span>
+<h3 class="font-headline-lg text-[24px] text-on-surface mb-4 leading-tight">Designing calibrated trust in autonomous systems</h3>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-3">Framework for human-machine collaboration in safety-critical environments using real-time confidence scores.</p>
+<div class="mt-auto flex justify-between items-center">
+<span class="font-label-mono text-[12px] text-on-surface-variant">2023 • CASE STUDY</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">north_east</span>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="glass-card p-4 rounded-xl flex flex-col group h-full reveal-active">
+<div class="relative aspect-[4/3] rounded-lg overflow-hidden mb-6 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An abstract visualization of digital data flowing through a structured grid. The image uses sharp lines, monochromatic charcoal tones, and vibrant safety orange highlights to represent the concept of cutting through documentation complexity and information burden." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDElNTkjju-O9ULjxrf1vjQvjZmmJ3KZCN_mnWQaqb9iQky0gNCSGxMw1eVQRRoT4bmy4_CGAi-kcJVRx3yvCN8kLN8VlFtYTEqEl8yICNw9MkC0OI3aHBbC9htsOTIsnVAJuo0uqahgoIfi5xyyuxW-7VZCzi_tCylNgeWVkJL637cw46dkuw5uO33Z6yvdNWn_J9XLwXR4T8tcPXBjOGKOpw-W8TgS-D8cnlFF7fzxrzSCkFwBPMsHSfG5w_w08kJJv7oj3jkMhWJ">
+</div>
+<div class="flex-1 flex flex-col">
+<span class="font-label-xs text-label-xs text-primary uppercase tracking-widest mb-2 block">Product Strategy</span>
+<h3 class="font-headline-lg text-[24px] text-on-surface mb-4 leading-tight">Cutting documentation burden via LLM-integration</h3>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-3">A workflow redesign for engineers that automates 70% of routine reporting through contextual AI agents.</p>
+<div class="mt-auto flex justify-between items-center">
+<span class="font-label-mono text-[12px] text-on-surface-variant">2023 • PRODUCT DESIGN</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">north_east</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Design Methodology -->
+<section class="bg-surface-container-lowest py-12 mt-24">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-start mb-24">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface leading-none">The<br><span class="text-primary">Methodology</span></h2>
+<p class="font-body-lg text-on-surface-variant mt-4 lg:mt-0">I believe that great design isn't just about how it looks, but how it scales, integrates, and evolves within a technical ecosystem.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="group reveal-active">
+<div class="font-display-lg text-[80px] text-surface-container-high group-hover:text-primary transition-colors mb-4 leading-none">01</div>
+<h4 class="font-headline-lg text-[20px] text-on-surface uppercase tracking-wider mb-4">Research</h4>
+<p class="font-body-md text-on-surface-variant">Uncovering the friction points in complex technical workflows through deep developer observation.</p>
+</div>
+<div class="group reveal-active">
+<div class="font-display-lg text-[80px] text-surface-container-high group-hover:text-primary transition-colors mb-4 leading-none">02</div>
+<h4 class="font-headline-lg text-[20px] text-on-surface uppercase tracking-wider mb-4">Systems Thinking</h4>
+<p class="font-body-md text-on-surface-variant">Building atomic components that handle multi-state data complexity without losing clarity.</p>
+</div>
+<div class="group reveal-active">
+<div class="font-display-lg text-[80px] text-surface-container-high group-hover:text-primary transition-colors mb-4 leading-none">03</div>
+<h4 class="font-headline-lg text-[20px] text-on-surface uppercase tracking-wider mb-4">AI-Fluency</h4>
+<p class="font-body-md text-on-surface-variant">Leveraging generative models to create adaptive interfaces that learn from user behavior.</p>
+</div>
+<div class="group reveal-active">
+<div class="font-display-lg text-[80px] text-surface-container-high group-hover:text-primary transition-colors mb-4 leading-none">04</div>
+<h4 class="font-headline-lg text-[20px] text-on-surface uppercase tracking-wider mb-4">Implementation</h4>
+<p class="font-body-md text-on-surface-variant">Bridging the gap between design and production code with precise handovers and QA.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative py-12 mt-24" id="about">
+<div class="flex flex-col lg:flex-row gap-gutter">
+<div class="w-full lg:w-1/2">
+<div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-surface-container border border-border-subtle group reveal-active"><img class="w-full h-full object-cover" alt="Guillaume Goder Profile Picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADxoqTxZ7Iy_dC4jLsY412_xNMhgVh5Ss1ofTOcFGg1crVa5rtSwirLsjwil2HzBe1Mrb0aibuS9R6GYM4wugcIej2Dn0cQgWeL5FE30posoqXP45Ohaqwsmjal1lkjkXES8XawtNMo0hFNI2AnhpKDG25olwWk-tbRpGzUNaM1MVGEqjNfGf8ON5-7Hc6Yd00eRoPHsTKjaBMGcwLM8JkLeAF0IPvCBgcj9j1VZsVNwRQQNtSzG9qbiboZFAYzk_M7mrICn1JF32c"><div class="absolute inset-0 bg-gradient-to-t from-background-deep via-transparent to-transparent opacity-60"></div></div>
+</div>
+<div class="w-full lg:w-1/2 flex flex-col justify-center">
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-widest block mb-4">Personal</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8">Engineering Intuition</h2>
+<div class="space-y-6 font-body-lg text-on-surface-variant mb-12">
+<p class="">I’m Guillaume, a designer who lives at the intersection of technical architecture and human behavior. I don't just build screens; I build systems that empower humans to navigate the complex data landscapes of the future.</p>
+<p class="">When I'm not pushing pixels for high-growth tech companies, I'm exploring the boundaries of game design and digital painting.</p>
+</div>
+<div class="flex flex-wrap gap-4 mb-12"><a class="flex items-center gap-2 px-4 py-2 border border-outline-variant bg-white/10 rounded-full hover:bg-white/20 transition-all font-label-mono text-label-mono text-on-surface" href="#"><span class="material-symbols-outlined text-sm">mail</span> Email</a><a class="flex items-center gap-2 px-4 py-2 border border-outline-variant bg-white/10 rounded-full hover:bg-white/20 transition-all font-label-mono text-label-mono text-on-surface" href="#"><span class="material-symbols-outlined text-sm">link</span> LinkedIn</a><a class="flex items-center gap-2 px-4 py-2 border border-outline-variant bg-white/10 rounded-full hover:bg-white/20 transition-all font-label-mono text-label-mono text-on-surface" href="#"><span class="material-symbols-outlined text-sm">description</span> Resume</a><a href="#" class="group relative flex items-center justify-between w-full p-8 bg-surface-container-low border border-border-subtle rounded-xl overflow-hidden transition-all hover:bg-surface-container-high active:scale-[0.98] reveal-active">
+    <!-- Side Quest Accent -->
+    <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary shadow-[4px_0_20px_rgba(255,181,154,0.3)]"></div>
+    
+    <div class="flex flex-col gap-2">
+        <span class="font-label-xs text-label-xs text-primary uppercase tracking-[0.2em] opacity-80">Creative Outlet</span>
+        <h3 class="font-headline-lg text-[24px] md:text-[32px] text-on-surface font-bold leading-tight">Concept Art &amp; Game UI Portfolio</h3>
     </div>
-  </section>
 
-  <section class="section" id="work">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow" data-fr="Projets sélectionnés">Selected Work</span>
-        <h2 data-fr="Trois études de cas, trois types de problèmes complexes">Three case studies, three kinds of hard problems</h2>
-      </div>
-
-      <div class="cards">
-
-        <a class="card" href="case-studies/ai-mcp-pipeline.html">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="22" cy="22" r="4.5" stroke="currentColor" stroke-width="2"/>
-              <circle cx="7" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
-              <circle cx="37" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
-              <circle cx="7" cy="34" r="3" stroke="currentColor" stroke-width="2"/>
-              <circle cx="37" cy="34" r="3" stroke="currentColor" stroke-width="2"/>
-              <path d="M9.5 12l9 8M34.5 12l-9 8M9.5 32l9-8M34.5 32l-9-8" stroke="currentColor" stroke-width="1.6"/>
-            </svg>
-          </div>
-          <span class="card-tag" data-fr="Système réel · En cours">Real System · In Progress</span>
-          <h3 data-fr="Concevoir la couche d'orchestration d'un pipeline créatif IA multi-outils">Designing the orchestration layer for a multi-tool AI creative pipeline</h3>
-          <p data-fr="Relier Claude, Blender, UE5, Figma et ComfyUI via MCP en une seule interface pilotable — un pipeline réel, des contraintes réelles.">Connecting Claude, Blender, UE5, Figma and ComfyUI through MCP into one directable interface — real pipeline, real constraints.</p>
-          <span class="card-status" data-fr="Capture en direct en cours →">Live capture in progress →</span>
-        </a>
-
-        <a class="card" href="case-studies/agent-trust.html">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="22" cy="22" r="16" stroke="currentColor" stroke-width="2"/>
-              <circle cx="22" cy="22" r="4" fill="currentColor"/>
-              <path d="M22 6v6M22 32v6M6 22h6M32 22h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <span class="card-tag" data-fr="Spéculatif · Semaines 3-4">Speculative · Weeks 3–4</span>
-          <h3 data-fr="Concevoir une confiance calibrée dans un copilote agentique">Designing calibrated trust into an agentic copilot</h3>
-          <p data-fr="Aperçus d'intention, un curseur d'autonomie et des mécanismes d'annulation pour un outil où l'agent doit gagner le contrôle progressivement.">Intent previews, an autonomy dial, and undo primitives for a workflow tool where the agent has to earn control incrementally.</p>
-          <span class="card-status" data-fr="À venir →">Coming next →</span>
-        </a>
-
-        <a class="card" href="case-studies/ehr-documentation.html">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="10" y="6" width="24" height="32" rx="2" stroke="currentColor" stroke-width="2"/>
-              <path d="M15 15h14M15 21h14M15 27h9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M29 30l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <span class="card-tag" data-fr="Spéculatif · Semaines 5-6">Speculative · Weeks 5–6</span>
-          <h3 data-fr="Réduire la charge de documentation lors des relèves en soins aigus">Cutting documentation burden in acute-care shift handoff</h3>
-          <p data-fr="Une refonte ciblée d'un flux clinique à enjeux élevés, fondée sur des recherches publiées sur l'épuisement professionnel et la fatigue d'alerte.">A focused redesign of one high-stakes clinician workflow, grounded in published burnout and alert-fatigue research.</p>
-          <span class="card-status" data-fr="À venir plus tard →">Coming later →</span>
-        </a>
-
-      </div>
+    <div class="flex items-center justify-center w-12 h-12 rounded-full border border-outline-variant group-hover:border-primary group-hover:bg-primary/10 transition-all">
+        <span class="material-symbols-outlined text-on-surface group-hover:text-primary transition-transform group-hover:translate-x-1">arrow_forward</span>
     </div>
-  </section>
+</a></div>
 
-  <section class="section" id="how-i-work" style="padding:0;">
-    <div class="wrap">
-      <div class="how-strip">
-        <div class="how-item">
-          <span class="num">01</span>
-          <h4 data-fr="Recherche">Research</h4>
-          <p data-fr="Fondée sur des contraintes réelles et des données publiées, pas des suppositions.">Grounded in real constraints and published evidence, not assumption.</p>
-        </div>
-        <div class="how-item">
-          <span class="num">02</span>
-          <h4 data-fr="Pensée systémique">Systems thinking</h4>
-          <p data-fr="Concevoir le modèle sous-jacent, pas seulement l'écran qui le recouvre.">Designing the underlying model, not just the screen on top of it.</p>
-        </div>
-        <div class="how-item">
-          <span class="num">03</span>
-          <h4 data-fr="Maîtrise de l'IA">AI-fluency</h4>
-          <p data-fr="Utiliser des outils IA dans le processus de travail, documenté honnêtement.">Using AI tooling as part of the working process, documented honestly.</p>
-        </div>
-        <div class="how-item">
-          <span class="num">04</span>
-          <h4 data-fr="Mise en œuvre">Implementation</h4>
-          <p data-fr="Capable de construire, pas seulement de spécifier.">Able to build the thing, not just spec it.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="about">
-    <div class="wrap about-grid">
-      <div>
-        <span class="eyebrow" data-fr="À propos">About</span>
-        <h2>Guillaume Goder</h2>
-        <p class="lede" data-fr="Designer UX/produit avec un parcours en illustration et développement de jeux vidéo, aujourd'hui concentré sur l'UX produit tech et les outils de conception assistés par IA.">UX/product designer with a background in illustration and game development, now focused on tech-product UX and AI-assisted design tooling.</p>
-        <p data-fr="Designer UX/produit et artiste concept basé à Montréal, à l'intersection de la recherche, du design d'interface et de la mise en œuvre. Après plus de six ans dans l'industrie du jeu vidéo — dernièrement à titre de Lead UI/UX Designer chez Little Guy Games — j'ai conçu et livré des interfaces jusqu'à leur intégration dans Unreal Engine 5, et développé mon propre pipeline créatif assisté par IA reliant Claude, Blender, UE5, Figma et ComfyUI. Je détiens un baccalauréat en design (illustration) de l'Université OCAD ainsi que des certifications UX/UI d'Epic Games. Bilingue (FR/EN).">I'm a UX/Product Designer and Concept Artist based in Montréal, working at the intersection of research, interface design, and implementation. Over six years in the game industry — most recently as Lead UI/UX Designer at Little Guy Games — I've designed and shipped interfaces through to Unreal Engine 5, and built my own AI-assisted creative pipeline connecting Claude, Blender, UE5, Figma, and ComfyUI. I hold a Bachelor of Design in Illustration from OCAD University and UX/UI certifications from Epic Games. Bilingual (EN/FR).</p>
-        <div class="about-links">
-          <a class="btn btn-secondary" href="mailto:gg28.god@gmail.com" data-fr="Courriel">Email</a>
-          <a class="btn btn-secondary" href="https://www.linkedin.com/in/guillaume-design/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn btn-secondary" href="assets/resume.html" data-fr-href="assets/resume_fr.html" target="_blank" rel="noopener" data-fr="CV">Resume</a>
-        </div>
-        <p style="margin-top:20px; font-size:0.9rem; color:var(--text-muted);" data-fr-html='Voir aussi mon <a href="https://guillaume-game-design.vercel.app/" target="_blank" rel="noopener" style="color:var(--accent-2); text-decoration:underline;">Portfolio d&#39;art conceptuel et UI de jeu →</a>'>Also see my <a href="https://guillaume-game-design.vercel.app/" target="_blank" rel="noopener" style="color:var(--accent-2); text-decoration:underline;">Concept Art &amp; Game UI Portfolio →</a></p>
-      </div>
-      <div>
-        <p class="lede" data-fr="Ce site est un portfolio autonome axé sur le tech/produit, distinct du portfolio existant de Guillaume dans l'industrie du jeu vidéo.">This is a standalone tech/product-focused portfolio, separate from Guillaume's existing games-industry portfolio.</p>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <p>© <span id="year"></span> Guillaume Goder</p>
-    <p data-fr="Codé à la main, déployé sur Vercel.">Built self-coded, deployed on Vercel.</p>
-  </div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center relative overflow-hidden py-12" id="contact">
+<div class="absolute inset-0 z-[-1] opacity-20">
+</div>
+<div class="py-12">
+<h2 class="font-display-lg text-[48px] md:text-display-lg text-on-surface mb-8">Ready to build<br>something real?</h2>
+<p class="font-body-lg text-on-surface-variant max-w-xl mx-auto mb-12">Let's discuss how we can transform your complex technical challenges into a competitive design advantage.</p>
+<a class="inline-flex px-12 py-6 bg-primary-container text-on-primary font-label-mono text-label-mono uppercase tracking-widest rounded-lg transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary-container/20" href="mailto:hello@guillaumegoder.com">
+                Get in touch
+            </a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-border-subtle bg-surface-base dark:bg-surface-base py-12">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="flex flex-col gap-4">
+<span class="font-display-lg text-body-lg font-bold text-on-surface">Guillaume Goder</span>
+<p class="font-body-md text-on-surface-variant">© 2024 Guillaume Goder. Designed for the future.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-md text-on-surface-variant hover:text-primary underline decoration-primary underline-offset-4 transition-all" href="#">LinkedIn</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary underline decoration-primary underline-offset-4 transition-all" href="#">Resume</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary underline decoration-primary underline-offset-4 transition-all" href="#">Email</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary underline decoration-primary underline-offset-4 transition-all" href="#">Concept Art</a>
+</div>
+</div>
 </footer>
+<script>
+        // Simple Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
 
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-<script src="script.js"></script>
-</body>
-</html>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card, .group').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Hover Effect on Hero
+        const hero = document.querySelector('section');
+        hero.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const x = (clientX / window.innerWidth - 0.5) * 20;
+            const y = (clientY / window.innerHeight - 0.5) * 20;
+            hero.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${-y}deg)`;
+        });
+        hero.addEventListener('mouseleave', () => {
+            hero.style.transform = 'none';
+        });
+    </script>
+
+
+
+
+
+
+</body></html>
